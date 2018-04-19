@@ -1,11 +1,5 @@
 [
   {
-    "name": "墨子",
-    "gender": "男",
-    "avatar": "/img/upload_bb684acdae2718158cf938d567ca4d59.jpg",
-    "id": 11
-  },
-  {
     "name": "孙膑",
     "gender": "男",
     "avatar": "/img/upload_21aa5bd23c94b835a7de72d634ad8582.jpg",
@@ -28,5 +22,11 @@
     "gender": "男",
     "avatar": "/img/upload_5544b409e0e493a2fccd719e1234b176.jpg",
     "id": 15
+  },
+  {
+    "name": "小越越",
+    "gender": "男",
+    "avatar": "/img/upload_354ad332db3fb511789a87f7ad49cf9b.jpg",
+    "id": 16
   }
 ]

@@ -1,5 +1,5 @@
 var http = require('http');
-var Router = require('./route');
+var Router = require('./router');
 var bindRender = require('./render.js');
 
 
