@@ -14,5 +14,7 @@ npm install
 npm start
 
 ```
+## showTime
+![image](![image](./static/showTime.gif))
 
 
