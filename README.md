@@ -15,6 +15,6 @@ npm start
 
 ```
 ## showTime
-![image](![image](./static/showTime.gif))
+![image](./static/showTime.gif)
 
 
