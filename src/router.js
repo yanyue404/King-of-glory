@@ -1,6 +1,6 @@
 var fs = require('fs');
 var path = require('path');
-var handler = require('./handler');
+var handler = require('./controller');
 var urlParse = require('url');
 
 module.exports = function (req, res) {
