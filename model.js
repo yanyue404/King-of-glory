@@ -9,6 +9,7 @@ function getAll(callback) {
   })
 }
 
+
 function writeAll(heros, callback) {
   fs.writeFile(path.join(__dirname, './static/data.json'), JSON.stringify(heros, null, '  '), (err) => {
     if (err) return callback(err);
@@ -17,6 +18,8 @@ function writeAll(heros, callback) {
     // 异步方法中无法通过 return 直接返回数据，所以 需要让调用者传递一个 callback 回调函数操作数据
   });
 }
+
+
 
 module.exports = {
   getAllHero(callback) {

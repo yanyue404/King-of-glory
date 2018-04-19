@@ -2,6 +2,9 @@ var http = require('http');
 var Router = require('./router');
 var bindRender = require('./render.js');
 
+
+
+
 var  server = http.createServer();
 server.on('request',(req,res)=>{
   bindRender(res);
