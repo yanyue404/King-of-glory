@@ -11,7 +11,7 @@
 npm install
 
 # serve with hot reload at http://127.0.0.1:3001/
-node main.js
+npm start
 
 ```
 
