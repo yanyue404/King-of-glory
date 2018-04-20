@@ -1,3 +1,4 @@
+'use esversion：6'
 var http = require('http');
 var Router = require('./router');
 var bindRender = require('./render.js');
@@ -15,3 +16,4 @@ server.listen(3001,function(){
  console.log('Run in http://127.0.0.1:3001 ');
  
 })
+module.exports = server;
