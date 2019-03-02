@@ -2,21 +2,20 @@
   "name": "King-of-glory",
   "version": "1.0.0",
   "description": "王者荣耀英雄管理器",
-  "main": "main.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node main.js",
-    "test": "mocha main.test.js"
+    "start": "npm test && nodemon ./src/app.js",
+    "test": "mocha ./src/test",
+    "clean": "rimraf node_modules",
+    "reset": "rimraf node_modules && npm install"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "chai": "^3.4.0",
-    "coveralls": "^2.11.4",
-    "istanbul": "^0.4.0",
-    "jshint": "^2.8.0",
     "mocha": "^2.3.3",
-    "tape": "^4.2.2"
+    "nodemon": "^1.18.10"
   },
   "dependencies": {
     "art-template": "^4.12.2",

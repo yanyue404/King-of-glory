@@ -1,7 +1,7 @@
-var fs = require('fs');
-var path = require('path');
-var handler = require('./handler');
-var urlParse = require('url');
+const fs = require('fs');
+const path = require('path');
+const handler = require('./handler');
+const urlParse = require('url');
 
 module.exports = function (req, res) {
   var {
@@ -36,7 +36,7 @@ module.exports = function (req, res) {
     handler.uploadEditHero(req, res);
   } else if (url.indexOf('/img/') === 0 || url.indexOf('/node_modules/') === 0) {
     // 处理图片请求和 node_modules 模块的资源文件请求
-    fs.readFile(path.join(__dirname, url), (err, data) => {
+    fs.readFile(path.join(__dirname, '../' + url), (err, data) => {
       if (err) {
         res.end('404');
       } else {

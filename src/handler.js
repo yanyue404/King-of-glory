@@ -1,7 +1,7 @@
-var model = require('./model');
-var path = require('path');
-var formidable = require('formidable'); //解析文件上传的数据
-var querystring = require('querystring');
+const model = require('./model');
+const path = require('path');
+const formidable = require('formidable'); //解析文件上传的数据
+const querystring = require('querystring');
 
 module.exports = {
   getIndexPage(req, res) {
@@ -39,7 +39,7 @@ module.exports = {
   sendImgFile(req, res) {
     var form = new formidable.IncomingForm();
 
-    form.uploadDir = path.join(__dirname, '/img');
+    form.uploadDir = path.join(__dirname, '../img');
     form.keepExtensions = true;
 
     form.parse(req, function (err, fileds, files) {
@@ -86,7 +86,7 @@ module.exports = {
   uploadEditHero(req, res) {
     var form = new formidable.IncomingForm();
 
-    form.uploadDir = path.join(__dirname, '/img');
+    form.uploadDir = path.join(__dirname, '../img');
     form.keepExtensions = true;
     form.encoding = 'utf-8';
 
