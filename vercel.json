@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "src/app.js", "use": "@vercel/node" },
+    { "src": "img/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/img/(.*)", "dest": "/img/$1" },
+    { "src": "/node_modules/(.*)", "dest": "/node_modules/$1" },
+    { "src": "/(.*)", "dest": "/src/app.js?handler=handler" }
+  ]
+}

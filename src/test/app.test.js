@@ -1,5 +1,5 @@
-const app = require('../app.js');
-const expect = require('chai').expect;
+const { expect } = require('chai');
+const app = require('../app');
 
 describe('server 构建正常吗？', () => {
   it('通过', () => {
