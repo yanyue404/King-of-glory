@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const urlParse = require('url');
+const https = require('https');
 const handler = require('./handler');
 const model = require('./model');
 
@@ -85,6 +86,48 @@ module.exports = function(req, res) {
       res.writeHead(200, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify(hero));
     });
+  } else if (url === '/api/github/user' && method === 'get') {
+    // GitHub 用户信息查询 API
+    const { username } = req.query;
+
+    if (!username) {
+      res.writeHead(400, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: '请提供用户名参数 username' }));
+      return;
+    }
+
+    const options = {
+      hostname: 'api.github.com',
+      path: `/users/${username}`,
+      method: 'GET',
+      headers: {
+        'User-Agent': 'Node.js',
+        Accept: 'application/vnd.github.v3+json'
+      }
+    };
+
+    const githubReq = https.request(options, githubRes => {
+      let data = '';
+
+      githubRes.on('data', chunk => {
+        data += chunk;
+      });
+
+      githubRes.on('end', () => {
+        res.writeHead(githubRes.statusCode, {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*'
+        });
+        res.end(data);
+      });
+    });
+
+    githubReq.on('error', error => {
+      res.writeHead(500, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: '请求 GitHub API 失败' }));
+    });
+
+    githubReq.end();
   } else if (
     url.indexOf('/img/') === 0 ||
     url.indexOf('/node_modules/') === 0

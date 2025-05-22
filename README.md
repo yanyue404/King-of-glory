@@ -45,6 +45,7 @@ vercel
 
 - 获取所有英雄列表：`GET /api/heroes`
 - 获取单个英雄信息：`GET /api/hero?id=英雄ID`
+- 获取 Github 用户的公开信息：`Get /api/github/user?username=yanyue404`
 
 ## 访问地址
 
