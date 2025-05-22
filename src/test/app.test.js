@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 const { expect } = require('chai');
 const app = require('../app');
 

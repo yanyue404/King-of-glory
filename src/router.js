@@ -5,6 +5,7 @@ const handler = require('./handler');
 const model = require('./model');
 
 module.exports = function(req, res) {
+  // eslint-disable-next-line
   const { pathname: url, query } = urlParse.parse(req.url, true);
   // 将 req.url中解构出来的 query 查询参数，添加为 req 对象的自定义属性，属性名叫做 query
   req.query = query;
