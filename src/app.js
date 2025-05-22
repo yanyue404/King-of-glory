@@ -2,7 +2,7 @@
 
 const http = require('http');
 const Router = require('./router');
-const bindRender = require('./utils/utils.js');
+const bindRender = require('./utils/utils');
 
 const server = http.createServer();
 server.on('request', (req, res) => {
@@ -13,7 +13,7 @@ server.on('request', (req, res) => {
 // 本地开发时使用
 if (process.env.NODE_ENV !== 'production') {
   server.listen(3000, function() {
-    console.log('Run in localhost:3000 ');
+    console.log('Run in localhost:3000, http://localhost:3000/');
   });
 }
 

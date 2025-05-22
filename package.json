@@ -7,7 +7,10 @@
     "start": "npm test && nodemon ./src/app.js",
     "test": "mocha ./src/test",
     "clean": "rimraf node_modules",
-    "reset": "rimraf node_modules && npm install"
+    "reset": "rimraf node_modules && npm install",
+    "lint": "npx eslint --fix ./src",
+    "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "fix:windows": "git config --local core.autocrlf false && git config --local core.eol lf && git rm --cached -r . && git reset --hard"
   },
   "keywords": [],
   "author": "",
