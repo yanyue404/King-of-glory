@@ -1,4 +1,4 @@
-# King-of-glory [![Build Status](https://travis-ci.org/yanyue404/King-of-glory.svg?branch=master)](https://travis-ci.org/yanyue404/King-of-glory)
+# King-of-glory ![Vercel](https://vercelbadge.vercel.app/api/yanyue404/King-of-glory?style=flat-square)
 
 > 王者荣耀-nodejs 英雄管理器（CRUD）
 
